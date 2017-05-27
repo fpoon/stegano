@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>504</width>
-    <height>409</height>
+    <height>468</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,7 +24,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -46,7 +46,7 @@ QScrollArea &gt; QWidget &gt; QWidget { background: transparent; }</string>
              <x>0</x>
              <y>0</y>
              <width>462</width>
-             <height>242</height>
+             <height>261</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -194,7 +194,7 @@ QScrollArea &gt; QWidget &gt; QWidget { background: transparent; }</string>
              <x>0</x>
              <y>0</y>
              <width>462</width>
-             <height>242</height>
+             <height>261</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -273,7 +273,7 @@ QScrollArea &gt; QWidget &gt; QWidget { background: transparent; }</string>
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_4">
+               <widget class="QPushButton" name="pbRead">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -337,7 +337,7 @@ QScrollArea &gt; QWidget &gt; QWidget { background: transparent; }</string>
       <property name="maximumSize">
        <size>
         <width>16777215</width>
-        <height>60</height>
+        <height>100</height>
        </size>
       </property>
       <property name="readOnly">
