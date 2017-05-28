@@ -11,6 +11,8 @@
 #include "coder.h"
 #include "mp3framecoder.h"
 #include "bmpcoder.h"
+#include "wavcoder.h"
+#include "jpgcoder.h"
 
 using namespace std;
 
@@ -32,7 +34,7 @@ void MainWindow::on_pbOpen_clicked()
                 this,
                 "Choose file...",
                 "~",
-                "All supported files (*.mp3 *.bmp);;MP3 file (*.mp3);;All files (*)");
+                "All supported files (*.mp3 *.bmp *.wav *.jpg);;MP3 file (*.mp3);;All files (*)");
     if (filename == "")
         return;
     ifstream f(filename.toStdString(), ios::binary | ios::ate);
@@ -67,7 +69,11 @@ void MainWindow::on_pbOpen_clicked()
             coder = new BMPCoder((uint8_t*)fileData.data(), fileData.size());
             break;
         case MODE_WAV:
+            coder = new WAVCoder((uint8_t*)fileData.data(), fileData.size());
+            break;
         case MODE_JPG:
+            coder = new JPGCoder((uint8_t*)fileData.data(), fileData.size());
+            break;
         default:
             coder = nullptr;
             log("Unknown file");
@@ -156,6 +162,19 @@ void MainWindow::changeMode(QString filename)
         mode = MODE_BMP;
         return;
     }
+    if (ext == ".wav")
+    {
+        log("Opened WAV file");
+        mode = MODE_WAV;
+        return;
+    }
+    if (ext == ".jpg")
+    {
+        log("Opened JPEG file");
+        mode = MODE_JPG;
+        return;
+    }
+
     log("Opened unknown file");
     mode = MODE_NONE;
 }

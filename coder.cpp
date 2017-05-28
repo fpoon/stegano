@@ -15,7 +15,7 @@ Coder::Coder(uint8_t *data, std::size_t size) : data(data), size(size)
 
 std::vector<uint8_t> Coder::Encode(std::string msg)
 {
-    log(to_string(points.size()));
+    //log(to_string(points.size()));
     uint16_t f = msg.size();
     if (points.size() < 2*8)
         return vector<uint8_t>(data, data+size);

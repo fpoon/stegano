@@ -32,7 +32,9 @@ SOURCES += main.cpp\
     loghelper.cpp \
     mp3frame.cpp \
     filehandler.cpp \
-    bmpcoder.cpp
+    bmpcoder.cpp \
+    wavcoder.cpp \
+    jpgcoder.cpp
 
 HEADERS  += mainwindow.h \
     coder.h \
@@ -40,6 +42,8 @@ HEADERS  += mainwindow.h \
     loghelper.h \
     mp3frame.h \
     filehandler.h \
-    bmpcoder.h
+    bmpcoder.h \
+    wavcoder.h \
+    jpgcoder.h
 
 FORMS    += mainwindow.ui
