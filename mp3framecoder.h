@@ -18,6 +18,7 @@ public:
     MP3FrameCoder(std::uint8_t* data, std::size_t size);
     virtual std::vector<std::uint8_t> Encode(std::string msg) override;
     virtual std::string Decode() override;
+    virtual int avaiableSpace() override;
     ~MP3FrameCoder();
 };
 

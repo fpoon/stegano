@@ -126,6 +126,11 @@ string MP3FrameCoder::Decode()
 
 }
 
+int MP3FrameCoder::avaiableSpace()
+{
+    return frames.size()/8;
+}
+
 MP3FrameCoder::~MP3FrameCoder()
 {
     for (auto f : frames)

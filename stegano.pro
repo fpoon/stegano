@@ -31,13 +31,15 @@ SOURCES += main.cpp\
     mp3framecoder.cpp \
     loghelper.cpp \
     mp3frame.cpp \
-    filehandler.cpp
+    filehandler.cpp \
+    bmpcoder.cpp
 
 HEADERS  += mainwindow.h \
     coder.h \
     mp3framecoder.h \
     loghelper.h \
     mp3frame.h \
-    filehandler.h
+    filehandler.h \
+    bmpcoder.h
 
 FORMS    += mainwindow.ui
